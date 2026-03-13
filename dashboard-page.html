@@ -53,7 +53,14 @@
     </div>
     
     <!-- Iframe с графиком (исправлен адрес Pinggy) -->
-	<iframe src="https://wzwivdlimx.a.pinggy.link/?X-Pinggy-No-Screen=true#/d/ad8mwjd/valute?orgId=1&from=2026-03-13T13:48:04.083Z&to=2026-03-13T19:48:04.083Z&timezone=browser&var-currency=GBP&viewPanel=panel-1" width="100%" height="500" frameborder="0"></iframe>
+	<iframe id="grafanaFrame"
+        class="iframe-container"
+        src="https://wzwivdlimx.a.pinggy.link/?X-Pinggy-No-Screen=true#/d/ad8mwjd/valute?orgId=1&from=2026-03-13T13:48:04.083Z&to=2026-03-13T19:48:04.083Z&timezone=browser&var-currency=GBP&viewPanel=panel-1"
+        width="100%"
+        height="500"
+        frameborder="0"
+        allowfullscreen>
+	</iframe>
 
     <script>
         function changeCurrency(currency) {
