@@ -52,15 +52,12 @@
         <button class="currency-btn" onclick="changeCurrency('GBP')">🇬🇧 GBP</button>
     </div>
     
-    <!-- Iframe с графиком (исправлен адрес Pinggy) -->
-<iframe id="grafanaFrame"
-        class="iframe-container"
-        src="https://wzwivdlimx.a.pinggy.link/?X-Pinggy-No-Screen=true#/d-solo/adgl8tb/new-dashboard?orgId=1&from=now-6h&to=now&timezone=browser&var-currency=USD&panelId=panel-1"
-        width="100%"
-        height="500"
-        frameborder="0"
-        allowfullscreen>
-</iframe>
+    <!-- Iframe с графиком -->
+    <iframe id="grafanaFrame"
+            class="iframe-container"
+            src="https://wzwivdlimx.a.free.pinggy.link/?X-Pinggy-No-Screen=true#/d-solo/adgl8tb/new-dashboard?orgId=1&timezone=browser&var-currency=USD&panelId=1"
+            allowfullscreen>
+    </iframe>
 
     <script>
         function changeCurrency(currency) {
@@ -68,9 +65,8 @@
             if (iframe) {
                 // Получаем текущий URL
                 let url = new URL(iframe.src);
-                // Обновляем параметры
+                // Меняем параметр var-currency
                 url.searchParams.set('var-currency', currency);
-                url.searchParams.set('var-endpoint', currency);
                 // Обновляем src
                 iframe.src = url.toString();
                 console.log('Валюта изменена на:', currency);
